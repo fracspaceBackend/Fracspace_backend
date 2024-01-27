@@ -10,13 +10,9 @@ export const registerUser = async (req,res)=>{
     try{
 
     
-
-        // const {error} = validate(req.body); 
-        // if(error){
-        //     console.log("hell");
-        //     console.error("error details",error.details);
-        //     return res.status(400).send({message:error.details[0].message});
-        // }   
+        
+        
+ 
         const user = await User.findOne({email:req.body.email});
         console.log("Hitted");
         if(user){
@@ -42,17 +38,17 @@ export const registerUser = async (req,res)=>{
 
 export const loginUser = async (req,res)=>{
     try{
-        // const {error} = validateEmailPassword(req.body);
-        // if(error) return res.status(400)
-        //                     .send({message:error.details[0].message});
+        
 
         const user = await User.findOne({email:req.body.email});
         console.log(user);
+        
 
 
         if(!user) return res.status(401).send({message:"User with Provided email does not exists!"});
 
         const validatePassword = await bcrypt.compare(req.body.password,user.password);
+        console.log(validatePassword,"password");
 
         if(!validatePassword) return res.status(401).send({message:"Invalid Password"});
 

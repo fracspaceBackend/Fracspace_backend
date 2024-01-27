@@ -7,7 +7,7 @@ import connectToDatabase from './config/db.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8002;
 
 connectToDatabase();
 
