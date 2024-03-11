@@ -25,3 +25,4 @@ jobs:
     - run: |
         touch .env
         echo "${{ env.fracspace_prod_env }}" > .env
+    - run: pm2 restart BackendApi
