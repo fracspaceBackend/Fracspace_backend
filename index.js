@@ -14,7 +14,7 @@ connectToDatabase();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.get("/",(req,res)=>{
-    res.send("API IS RUNNING");
+    res.send("API IS UP AND RUNNING .");
 });
 //routers
 app.use('/api/users',userRouter);
