@@ -12,7 +12,7 @@ userRouter.post("/login",loginUser);
 userRouter.get("/profile",getUserDetails);
 userRouter.put("/forgotpassword",forgotPassword);
 userRouter.get("/start",(req,res)=>{
-    res.status("hello world");
+    res.status(200).send({message:"App is working"});
 });
 // userRouter.put("/reset-pasword",changePassword);
 // userRouter.put("/resetpassword/:resetToken",resetPassword);
