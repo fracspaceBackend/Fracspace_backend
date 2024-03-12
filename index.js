@@ -13,7 +13,7 @@ connectToDatabase();
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.get("/",(req,res)=>
+app.get("/",(req,res)=>{
     res.send("API IS UP N RUNNINg🚀");
 });
 //routers
