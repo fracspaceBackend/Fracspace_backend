@@ -17,7 +17,7 @@ app.get("/",(req,res)=>{
     res.send("API IS UP N RUNNINg🚀");
 });
 //routers
-
+app.use("/api/users",userRouter)
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
