@@ -14,7 +14,7 @@ connectToDatabase();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.get("/",(req,res)=>{
-    res.send("API IS UP N RUNNINg🚀");
+    res.send("API IS UP N RUNNINg🚀...Showing github-actions status to to Raviteja anna ");
 });
 //routers
 app.use("/api/users",userRouter)
